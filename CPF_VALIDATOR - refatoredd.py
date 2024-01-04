@@ -55,7 +55,7 @@ def get_validated_cpf():
             continue
         
         run_again = input('Do you want to validate another CPF? Type (Y)es to continue or any letter to exit: ')
-        if run_again.strip().lower() != 'y' and run_again.strip().lower() != 'yes' and run_again.strip().lower() != 's' and run_again.strip().lower() != 'sim':
+        if run_again.strip().lower() not in ['y', 'yes', 's', 'sim']:
             print('Exiting')
             sys.exit()
         time.sleep(0.1)
